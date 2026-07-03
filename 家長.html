@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伴玩星球 | 專業臨托媒合服務</title>
+    <style>
+        /* 基礎設定 */
+        body {
+            font-family: 'PingFang TC', 'Microsoft JhengHei', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #faf9f6;
+            line-height: 1.6;
+        }
+        
+        /* 頂部導覽列與標題 */
+        header {
+            background-color: #ffb74d;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+        header p {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        /* 內容區塊 */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        h2 {
+            color: #ef6c00;
+            border-bottom: 2px solid #ffe0b2;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        /* 流程步驟設計 */
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding-top: 10px;
+        }
+        .step-num {
+            background: #ffb74d;
+            color: #fff;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .step-content strong {
+            color: #d84315;
+            font-size: 18px;
+        }
+
+        /* 按鈕設計 */
+        .btn-download {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 8px 16px;
+            background-color: #fff3e0;
+            color: #e65100;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid #ffcc80;
+            transition: all 0.3s ease;
+        }
+        .btn-download:hover {
+            background-color: #ffe0b2;
+            color: #d84315;
+        }
+
+        /* 重點提示區塊 */
+        .highlight {
+            background-color: #f1f8e9;
+            border-left: 5px solid #8bc34a;
+        }
+        .highlight h2 {
+            color: #558b2f;
+            border-bottom: 2px solid #dcedc8;
+        }
+        .highlight li {
+            margin-bottom: 12px;
+        }
+
+        /* Q&A 區塊設計 */
+        .faq-item {
+            border-bottom: 1px solid #f0f0f0;
+            padding: 15px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: bold;
+            color: #e65100;
+            margin-bottom: 8px;
+            font-size: 17px;
+        }
+        .faq-a {
+            color: #555;
+            padding-left: 20px;
+            position: relative;
+        }
+        .faq-a::before {
+            content: "A:";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #ffb74d;
+        }
+
+        /* 居托中心卡片設計 */
+        .center-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        @media (min-width: 600px) {
+            .center-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .center-item {
+            background: #fff8e1;
+            border: 1px solid #ffe0b2;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .center-title {
+            color: #e65100;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 8px;
+            border-bottom: 1px dashed #ffcc80;
+            padding-bottom: 5px;
+        }
+        .center-details {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+        }
+        .center-details strong {
+            color: #d84315;
+        }
+
+        /* 聯絡我們清單 */
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-list li {
+            font-size: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        .contact-list strong {
+            color: #ef6c00;
+            width: 130px;
+        }
+        /* 點擊連結的樣式設計 */
+        .action-link {
+            color: #d84315;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #fff3e0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            word-break: break-all;
+        }
+        .action-link:hover {
+            background-color: #ffcc80;
+            color: #e65100;
+        }
+
+        /* 頁尾 */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>伴玩星球</h1>
+        <p>專業、合法、安心的臨托與伴玩媒合服務</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="section">
+            <h2>📝 我們的媒合與服務流程</h2>
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <strong>需求媒合</strong><br>
+                    我們會先依據家長填寫的需求表單，為您尋找最合適的伴玩人員。
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <strong>資格確認</strong><br>
+                    媒合成功後，我們會將該名人員的「托育人員登記證」傳給您確認，確保人員專業資格。
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <strong>簽署合約</strong><br>
+                    陪玩服務當天，伴玩人員會帶著「台中市居家托育服務中心」規定的合約，與您現場簽署。
+                </div>
+            </div>
+        </div>
+
+        <div class="section highlight">
+            <h2>🛡️ 為什麼需要簽署合約與填寫幼兒資訊？</h2>
+            <ul style="padding-left: 20px;">
+                <li><strong>落實政府規定：</strong> 我們的人員皆為台中市合法登記的托育人員，完整合約需回報給居托中心建檔備查，保障雙方安全。</li>
+                <li><strong>完善保險理賠：</strong> 我們的托育人員皆具備相關保險。合約上填寫幼兒資訊，是為了萬一發生意外狀況時，保險能夠順利理賠給幼兒。</li>
+                <li><strong>公開透明：</strong> 此份合約書內容為統一格式，您也可以隨時在「台中市居家托育服務中心」的官方網站上查閱。</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>💬 常見問題 Q&A</h2>
+            <div class="faq-item">
+                <div class="faq-q">合約有包含適應期嗎？</div>
+                <div class="faq-a">有的，依據合約規範，自收托日起1個月內為適應期，於適應期間雙方可終止本契約。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">為什麼合約上需要填寫身分證字號？個資安全嗎？</div>
+                <div class="faq-a">因為我們的人員皆有政府核發的登記證，依照規定，完整的合約（包含身分證字號）必須繳回給居托中心備查。我們嚴格遵守個資法，您的資料僅用於政府備查與保險用途，請您放心。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">伴玩人員的資格是如何篩選的？</div>
+                <div class="faq-a">我們合作的伴玩人員皆具有「台中市居家托育服務中心」核發的登記證，具備專業托育資格且受過完整訓練。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">如果臨時有事需要取消，該如何處理？</div>
+                <div class="faq-a">臨時取消或變更時間的相關規範，皆會明確記載於您簽署的合約中，我們一切依合約規定執行，以保障雙方權益。</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🏢 臺中市居家托育服務中心資訊</h2>
+            <p style="color: #666; margin-top: 0;">我們的人員皆依法向以下各區中心辦理登記，保障托育安全：</p>
+            <div class="center-list">
+                
+                <div class="center-item">
+                    <div class="center-title">第一區居家托育服務中心</div>
+                    <div class="center-details">
+                        <strong>承辦單位：</strong>財團法人彭婉如文教基金會<br>
+                        <strong>負責區域：</strong>中區、東區、南區、南屯區<br>
+                        <strong>電話：</strong><a href="tel:0424724830" style="color: #d84315; text-decoration: none;">04-24724830</a><br>
+                        <strong>地址：</strong>臺中市南屯區東興路2段98號8樓
+                    </div>
+                </div>
+
+                <div class="center-item">
+                    <div class="center-title">第二區居家托育服務中心</div>
+                    <div class="center-details">
+                        <strong>承辦單位：</strong>朝陽科技大學<br>
+                        <strong>負責區域：</strong>西區、西屯區<br>
+                        <strong>電話：</strong><a href="tel:0424527828" style="color: #d84315; text-decoration: none;">04-24527828</a><br>
+                        <strong>地址：</strong>臺中市西屯區光明路160號2樓
+                    </div>
+                </div>
+
+                <div class="center-item">
+                    <div class="center-title">第三區居家托育服務中心</div>
+                    <div class="center-details">
+                        <strong>承辦單位：</strong>中臺科技大學<br>
+                        <strong>負責區域：</strong>北區、北屯區<br>
+                        <strong>電話：</strong><a href="tel:0422338063" style="color: #d84315; text-decoration: none;">04-22338063</a><br>
+                        <strong>地址：</strong>臺中市北區臺灣大道一段667號5F
+                    </div>
+                </div>
+
+                <div class="center-item">
+                    <div class="center-title">第四區居家托育服務中心</div>
+                    <div class="center-details">
+                        <strong>承辦單位：</strong>弘光科技大學<br>
+                        <strong>負責區域：</strong>沙鹿、龍井、大肚、清水、梧棲、大甲、大安、外埔區<br>
+                        <strong>電話：</strong><a href="tel:0426368722" style="color: #d84315; text-decoration: none;">04-26368722</a><br>
+                        <strong>地址：</strong>臺中市沙鹿區福幼街8號3樓
+                    </div>
+                </div>
+
+                <div class="center-item">
+                    <div class="center-title">第五區居家托育服務中心</div>
+                    <div class="center-details">
+                        <strong>承辦單位：</strong>中臺科技大學<br>
+                        <strong>負責區域：</strong>豐原、后里、石岡、東勢、和平、新社、潭子、大雅、神岡區<br>
+                        <strong>電話：</strong><a href="tel:0425226618" style="color: #d84315; text-decoration: none;">04-25226618</a><br>
+                        <strong>地址：</strong>臺中市豐原區西安街36號5樓
+                    </div>
+                </div>
+
+                <div class="center-item">
+                    <div class="center-title">第六區居家托育服務中心</div>
+                    <div class="center-details">
+                        <strong>承辦單位：</strong>財團法人亞洲大學<br>
+                        <strong>負責區域：</strong>大里區、太平區、霧峰區、烏日區<br>
+                        <strong>電話：</strong><a href="tel:0424820181" style="color: #d84315; text-decoration: none;">04-24820181</a><br>
+                        <strong>地址：</strong>臺中市大里區國光路二段500號9樓之1
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📞 聯絡我們</h2>
+            <p>若您對合約內容有任何疑問，或需要進一步了解我們的服務，歡迎隨時透過以下方式與我們聯繫：</p>
+            <ul class="contact-list">
+                <li><strong>LINE 官方帳號：</strong> <a href="https://lin.ee/nwlFbc0" class="action-link" target="_blank">@563xerwv (點此加入好友)</a></li>
+                <li><strong>電子信箱：</strong> <a href="mailto:playplay2025428@gmail.com" class="action-link">playplay2025428@gmail.com</a></li>
+                <li><strong>Instagram：</strong> <a href="https://www.instagram.com/planet_play.25?igsh=MXJsbHljeWJyYjZqdA%3D%3D&utm_source=qr" class="action-link" target="_blank">planet_play.25</a></li>
+                <li><strong>Facebook：</strong> <a href="https://www.facebook.com/share/1UEmGLzqkR/?mibextid=wwXIfr" class="action-link" target="_blank">伴玩星球-到宅托育媒合服務</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2024 伴玩星球服務中心. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
